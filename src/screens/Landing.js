@@ -68,18 +68,20 @@ const Landing = () => {
           </Col>
         </Row>
         <Row style={{ marginTop: "3rem" }}>
-          <Col>
+          <Col lg="4" md="3" sm="2">
             <US />
           </Col>
-          <Col>
+          <Col lg="4" md="3" sm="2">
             <Canada />
           </Col>
-          <Col>
+          <Col lg="4" md="3" sm="2">
             <Europe />
           </Col>
         </Row>
         <Row style={{ marginTop: "3rem" }}>
-          <Restrictions />
+          <Col lg="12" md="12" sm="1">
+            <Restrictions />
+          </Col>
         </Row>
       </Container>
       <footer style={{ textAlign: "center", marginTop: "1rem" }}>

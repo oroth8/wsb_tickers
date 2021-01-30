@@ -29,7 +29,7 @@ const Restrictions = () => {
             </td>
             <td>Shares, Options</td>
             <td>1-5 Shares, 10options/Standard Limits</td>
-            <td>
+            <td className="rh">
               AAL, ACB, AG, AMC, AMD, BB, BBBY, BYDDY, BYND, CCIV, CLOV, CRIS,
               CTRM, EXPR, EZGO, GM, GME, GTE, HIMS. INO, IPOE, IPOF, JAGX, KOSS,
               LLIT, MRNA, NAKD, NCTY, NOK, NVAX, OPEN, RLX, RKT, RYCEY, SBUX,

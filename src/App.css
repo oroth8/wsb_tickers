@@ -12,3 +12,9 @@ h5 {
 .tickerData {
   font-size: x-small;
 }
+
+@media screen and (max-width: 415px) {
+  .rh {
+    font-size: xx-small;
+  }
+}
