@@ -7,11 +7,13 @@ import Restrictions from "../components/Restrictions";
 import Stocks from "../components/Stocks";
 import US from "../components/US";
 import Logo from "../WallStreetBets.png";
+import Meta from "../components/Meta";
 
 const Landing = () => {
   return (
     <>
       <NavbarHeader />
+      <Meta />
       <Container style={{ marginTop: "5rem" }}>
         <Row>
           <Col lg="4">{/* empty */}</Col>
@@ -22,7 +24,10 @@ const Landing = () => {
         </Row>
         <Row>
           <Col>
-            <h1 style={{ textAlign: "center" }}>Ticker Dashboard</h1>
+            <h1 style={{ textAlign: "center" }}>
+              Ticker Dashboard{" "}
+              <i style={{ color: "red" }} className="fas fa-rocket"></i>
+            </h1>
           </Col>
         </Row>
         <Row style={{ marginTop: "3rem", marginBottom: "3rem" }}>
@@ -47,7 +52,7 @@ const Landing = () => {
             <Stocks />
           </Col>
         </Row>
-        <Row>
+        <Row style={{ marginTop: "3rem" }}>
           <Col>
             <US />
           </Col>
@@ -58,7 +63,7 @@ const Landing = () => {
             <Europe />
           </Col>
         </Row>
-        <Row>
+        <Row style={{ marginTop: "3rem" }}>
           <Restrictions />
         </Row>
       </Container>
