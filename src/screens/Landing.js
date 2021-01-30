@@ -8,6 +8,7 @@ import Stocks from "../components/Stocks";
 import US from "../components/US";
 import Logo from "../WallStreetBets.png";
 import Meta from "../components/Meta";
+import Disclaimer from "../components/Disclaimer";
 
 const Landing = () => {
   return (
@@ -83,6 +84,7 @@ const Landing = () => {
             Owen Roth
           </a>
         </p>
+        <Disclaimer />
       </footer>
     </>
   );

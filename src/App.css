@@ -1,9 +1,14 @@
 h1,
 h2,
-h4 {
+h4,
+h5 {
   color: white !important;
 }
 
 .stockCard {
   margin-bottom: 1rem;
+}
+
+.tickerData {
+  font-size: x-small;
 }
