@@ -9,6 +9,7 @@ import US from "../components/US";
 import Logo from "../WallStreetBets.png";
 import Meta from "../components/Meta";
 import Disclaimer from "../components/Disclaimer";
+import Clock from "react-live-clock";
 
 const Landing = () => {
   return (
@@ -29,28 +30,41 @@ const Landing = () => {
               Ticker Dashboard{" "}
               <i style={{ color: "red" }} className="fas fa-rocket"></i>
             </h1>
+            <h6 style={{ textAlign: "center" }}>
+              {" "}
+              Eastern/US Time:{" "}
+              <Clock
+                format={"HH:mm:ss"}
+                ticking={true}
+                timezone={"US/Eastern"}
+              />
+            </h6>
+            <p style={{ textAlign: "center" }}>
+              *Note: Data is SAMPLE only until market data portal opens at 4am
+              EST
+            </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "3rem", marginBottom: "3rem" }}>
           <Col lg="4">
-            <Stocks />
+            <Stocks tick="GME" />
           </Col>
           <Col lg="4">
-            <Stocks />
+            <Stocks tick="AMC" />
           </Col>
           <Col lg="4">
-            <Stocks />
+            <Stocks tick="NOK" />
           </Col>
         </Row>
         <Row>
           <Col lg="4">
-            <Stocks />
+            <Stocks tick="BB" />
           </Col>
           <Col lg="4">
-            <Stocks />
+            <Stocks tick="BBBY" />
           </Col>
           <Col lg="4">
-            <Stocks />
+            <Stocks tick="MAC" />
           </Col>
         </Row>
         <Row style={{ marginTop: "3rem" }}>
@@ -83,6 +97,18 @@ const Landing = () => {
           >
             Owen Roth
           </a>
+        </p>
+        <p>
+          Want to contribute? Post an issue? Please do so on the{" "}
+          <a
+            href="https://github.com/oroth8/wsb_tickers"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "lightgreen" }}
+          >
+            GitHub
+          </a>{" "}
+          page. Thank you!
         </p>
         <Disclaimer />
       </footer>
