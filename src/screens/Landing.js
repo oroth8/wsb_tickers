@@ -67,6 +67,23 @@ const Landing = () => {
           <Restrictions />
         </Row>
       </Container>
+      <footer style={{ textAlign: "center", marginTop: "1rem" }}>
+        <p>
+          If you enjoy this site please venmo{" "}
+          <span style={{ color: "lightgreen" }}>@Owen-Roth</span> any ammount
+          you please. Need to buy more GME!!!! To the MOON!!!
+        </p>
+        <p>
+          Coded by{" "}
+          <a
+            href="https://github.com/oroth8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Owen Roth
+          </a>
+        </p>
+      </footer>
     </>
   );
 };

@@ -27,13 +27,19 @@ const NavbarHeader = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink
+                href="https://www.reddit.com/r/wallstreetbets/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                r/wallstreetbets
+              </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">
                 GitHub
               </NavLink>
-            </NavItem>
+            </NavItem> */}
           </Nav>
         </Collapse>
       </Navbar>
