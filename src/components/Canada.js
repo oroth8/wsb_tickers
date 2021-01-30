@@ -12,7 +12,7 @@ const Canada = () => {
           <tr>
             <th>Brokerage</th>
             <th>
-              Time Frame <i className="far fa-clock"></i>
+              Approval <i className="far fa-clock"></i>
             </th>
           </tr>
         </thead>
@@ -27,7 +27,7 @@ const Canada = () => {
                 TD Ameritrade
               </a>
             </td>
-            <td>Shares, Options</td>
+            <td style={{ color: "orange" }}>Slow</td>
           </tr>
           <tr>
             <td>
@@ -39,7 +39,7 @@ const Canada = () => {
                 Wealth Simple
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "lightgreen" }}>Quick</td>
           </tr>
           <tr>
             <td>
@@ -51,7 +51,7 @@ const Canada = () => {
                 RBC Direct Invest
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "yellow" }}>Medium</td>
           </tr>
           <tr>
             <td>
@@ -63,7 +63,7 @@ const Canada = () => {
                 Scotia iTrade
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "yellow" }}>Medium</td>
           </tr>
           <tr>
             <td>
@@ -75,7 +75,7 @@ const Canada = () => {
                 CIBC
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "lightgreen" }}>Quick</td>
           </tr>
         </tbody>
       </Table>

@@ -12,7 +12,7 @@ const US = () => {
           <tr>
             <th>Brokerage</th>
             <th>
-              Time Frame <i className="far fa-clock"></i>
+              Approval <i className="far fa-clock"></i>
             </th>
           </tr>
         </thead>
@@ -27,7 +27,7 @@ const US = () => {
                 E-TRADE
               </a>
             </td>
-            <td>Shares, Options</td>
+            <td style={{ color: "orange" }}>Slow</td>
           </tr>
           <tr>
             <td>
@@ -39,7 +39,7 @@ const US = () => {
                 Fidelity
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "orange" }}>Slow</td>
           </tr>
           <tr>
             <td>
@@ -51,7 +51,7 @@ const US = () => {
                 Vanguard
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "orange" }}>Slow</td>
           </tr>
           <tr>
             <td>
@@ -63,7 +63,7 @@ const US = () => {
                 Dough
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "lightgreen" }}>Quick</td>
           </tr>
           <tr>
             <td>
@@ -75,7 +75,7 @@ const US = () => {
                 SoFi
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "lightgreen" }}>Quick</td>
           </tr>
         </tbody>
       </Table>

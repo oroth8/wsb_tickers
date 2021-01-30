@@ -12,7 +12,7 @@ const Europe = () => {
           <tr>
             <th>Brokerage</th>
             <th>
-              Time Frame <i className="far fa-clock"></i>
+              Approval <i className="far fa-clock"></i>
             </th>
           </tr>
         </thead>
@@ -27,7 +27,7 @@ const Europe = () => {
                 FreeTrade Plus
               </a>
             </td>
-            <td>Shares, Options</td>
+            <td style={{ color: "lightgreen" }}>Quick</td>
           </tr>
           <tr>
             <td>
@@ -39,7 +39,7 @@ const Europe = () => {
                 Degiro
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "lightgreen" }}>Quick</td>
           </tr>
           <tr>
             <td>
@@ -51,7 +51,7 @@ const Europe = () => {
                 Scalable Capital
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "yellow" }}>Medium</td>
           </tr>
           <tr>
             <td>
@@ -63,7 +63,7 @@ const Europe = () => {
                 Revolut
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "lightgreen" }}>Quick</td>
           </tr>
           <tr>
             <td>
@@ -75,7 +75,7 @@ const Europe = () => {
                 Hargreaves Landsdowne
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "yellow" }}>Medium</td>
           </tr>
           <tr>
             <td>
@@ -87,7 +87,7 @@ const Europe = () => {
                 AJ Bell
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "orange" }}>Slow</td>
           </tr>
           <tr>
             <td>
@@ -99,7 +99,7 @@ const Europe = () => {
                 Rabobank
               </a>
             </td>
-            <td>Increased Margin, Limiting Options Contracts</td>
+            <td style={{ color: "yellow" }}>Medium</td>
           </tr>
         </tbody>
       </Table>
