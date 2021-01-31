@@ -77,7 +77,10 @@ const Restrictions = () => {
             </td>
             <td>Increased Margin, Limiting Options Contracts</td>
             <td>Varies</td>
-            <td>None</td>
+            <td>
+              AMC, CVM, EXPR, FOSL, GME, NOK, BB, BBBY, FIZZ, GSX, IRBT, NCMI,
+              TR, UONE, VIR, NAK, NAKD, DDS, KOSS
+            </td>
           </tr>
         </tbody>
       </Table>
