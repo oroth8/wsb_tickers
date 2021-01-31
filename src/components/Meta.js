@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 const Meta = () => {
   return (
     <Helmet>
-      <title>$69 GME, WSBT</title>
+      <title>$325.00 GME || YOLO</title>
       <meta
         name="description"
         content="A dashboard for Wall Street Bet Tickers"
