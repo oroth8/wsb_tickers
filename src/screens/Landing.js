@@ -10,8 +10,7 @@ import Logo from "../assets/img/WallStreetBets.png";
 import Meta from "../components/Meta";
 import Disclaimer from "../components/Disclaimer";
 import Clock from "react-live-clock";
-import MarketStatus from "../components/MarketStatus";
-
+import News from "../components/News";
 const Landing = () => {
   return (
     <>
@@ -85,7 +84,7 @@ const Landing = () => {
           </Col>
         </Row>
         <Row style={{ marginTop: "3rem" }}>
-          <MarketStatus />
+          <News />
         </Row>
       </Container>
       <footer style={{ textAlign: "center", marginTop: "1rem" }}>

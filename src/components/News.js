@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import Loader from "./Loader";
 
-const MarketStatus = () => {
+const News = () => {
   const apiKey = process.env.REACT_APP_POLYGON_KEY;
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -94,4 +94,4 @@ const MarketStatus = () => {
   );
 };
 
-export default MarketStatus;
+export default News;

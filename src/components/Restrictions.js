@@ -54,6 +54,20 @@ const Restrictions = () => {
           <tr>
             <td>
               <a
+                href="https://www.trading212.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Trading212
+              </a>
+            </td>
+            <td>Increased Margin, Limiting Options Contracts</td>
+            <td>Varies</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>
+              <a
                 href="https://www1.interactivebrokers.com/en/home.php"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -80,6 +94,42 @@ const Restrictions = () => {
             <td>
               AMC, CVM, EXPR, FOSL, GME, NOK, BB, BBBY, FIZZ, GSX, IRBT, NCMI,
               TR, UONE, VIR, NAK, NAKD, DDS, KOSS
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="https://www.apexclearing.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apex Clearing
+              </a>
+            </td>
+            <td>Restricting Trading</td>
+            <td>Varies</td>
+            <td>
+              *Not a brokerage but a clearing firm that executes trades on
+              behalf of brokers. Becareful if your broker uses this clearing
+              firm to execute trades.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="https://www.banking.barclaysus.com/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Barclays
+              </a>
+            </td>
+            <td>Restricting Trading</td>
+            <td>Varies</td>
+            <td>
+              *Not a brokerage but a clearing firm that executes trades on
+              behalf of brokers. Becareful if your broker uses this clearing
+              firm to execute trades.
             </td>
           </tr>
         </tbody>
