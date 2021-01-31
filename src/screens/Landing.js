@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import Canada from "../components/Canada";
-import Europe from "../components/Europe";
+import Canada from "../components/brokers/Canada";
+import Europe from "../components/brokers/Europe";
 import NavbarHeader from "../components/NavbarHeader";
 import Restrictions from "../components/Restrictions";
-import Stocks from "../components/Stocks";
-import US from "../components/US";
-import Logo from "../WallStreetBets.png";
+import StockCard from "../components/StockCard";
+import US from "../components/brokers/US";
+import Logo from "../assets/img/WallStreetBets.png";
 import Meta from "../components/Meta";
 import Disclaimer from "../components/Disclaimer";
 import Clock from "react-live-clock";
@@ -47,24 +47,24 @@ const Landing = () => {
         </Row>
         <Row style={{ marginTop: "3rem", marginBottom: "3rem" }}>
           <Col lg="4">
-            <Stocks tick="GME" />
+            <StockCard tick="GME" />
           </Col>
           <Col lg="4">
-            <Stocks tick="AMC" />
+            <StockCard tick="AMC" />
           </Col>
           <Col lg="4">
-            <Stocks tick="NOK" />
+            <StockCard tick="NOK" />
           </Col>
         </Row>
         <Row>
           <Col lg="4">
-            <Stocks tick="BB" />
+            <StockCard tick="BB" />
           </Col>
           <Col lg="4">
-            <Stocks tick="BBBY" />
+            <StockCard tick="BBBY" />
           </Col>
           <Col lg="4">
-            <Stocks tick="MAC" />
+            <StockCard tick="MAC" />
           </Col>
         </Row>
         <Row style={{ marginTop: "3rem" }}>

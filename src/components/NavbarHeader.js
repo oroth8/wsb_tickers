@@ -9,7 +9,7 @@ import {
   NavLink,
 } from "reactstrap";
 
-import logo from "../WallStreetBets.png";
+import logo from "../assets/img/WallStreetBets.png";
 
 const NavbarHeader = (props) => {
   const [collapsed, setCollapsed] = useState(true);
