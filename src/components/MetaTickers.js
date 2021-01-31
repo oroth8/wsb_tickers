@@ -18,7 +18,7 @@ const MetaTickers = () => {
   };
 
   return (
-    <>
+    <div style={{ float: "right" }}>
       <p>Set your tab ticker! *Price won't change when market is closed</p>
       <Dropdown
         isOpen={dropdownOpen}
@@ -36,7 +36,7 @@ const MetaTickers = () => {
         </DropdownMenu>
       </Dropdown>
       <Meta ticker1={selTicker} />
-    </>
+    </div>
   );
 };
 

@@ -11,6 +11,7 @@ import Disclaimer from "../components/Disclaimer";
 import Clock from "react-live-clock";
 import News from "../components/News";
 import MetaTickers from "../components/MetaTickers";
+import ShortInt from "../components/ShortInt";
 const Landing = () => {
   return (
     <>
@@ -67,7 +68,20 @@ const Landing = () => {
             <StockCard tick="MAC" />
           </Col>
         </Row>
-        <MetaTickers />
+        <Row>
+          <Col md="4">
+            <ShortInt style={{ marginTop: "1rem" }} />
+          </Col>
+          <Col md="4">
+            <div>
+              <h5>Has the squeeze happened yet?</h5>
+              <p>No short interest too high.</p>
+            </div>
+          </Col>
+          <Col md="4">
+            <MetaTickers />
+          </Col>
+        </Row>
         <Row style={{ marginTop: "3rem" }}>
           <Col lg="4" md="3" sm="2">
             <US />
