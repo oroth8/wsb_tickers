@@ -18,3 +18,19 @@ h5 {
     font-size: xx-small;
   }
 }
+.newsCard col {
+  align-items: center;
+  justify-content: center;
+}
+.newsCard div {
+  font-size: x-small;
+  text-align: center;
+}
+
+.newsCard img {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

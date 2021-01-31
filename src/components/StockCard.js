@@ -29,10 +29,16 @@ const StockCard = ({ tick }) => {
       const res = await axios.get(
         `https://api.polygon.io/v2/aggs/ticker/${tick}/prev?unadjusted=true&apiKey=${apiKey}`
       );
-      setStockData(res.data.results[0]);
+      if (res) {
+        setStockData(res.data.results[0]);
+      }
       setLoading(false);
     } catch (error) {
-      setMessage(error.response.statusText);
+      if (error.response.statusText) {
+        setMessage(error.response.statusText);
+      } else {
+        setMessage("Server Error");
+      }
       setLoading(false);
     }
   };
