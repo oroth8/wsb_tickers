@@ -7,15 +7,15 @@ import Restrictions from "../components/Restrictions";
 import StockCard from "../components/StockCard";
 import US from "../components/brokers/US";
 import Logo from "../assets/img/WallStreetBets.png";
-import Meta from "../components/Meta";
 import Disclaimer from "../components/Disclaimer";
 import Clock from "react-live-clock";
 import News from "../components/News";
+import MetaTickers from "../components/MetaTickers";
 const Landing = () => {
   return (
     <>
       <NavbarHeader />
-      <Meta />
+      {/* <Meta /> */}
       <Container style={{ marginTop: "5rem" }}>
         <Row>
           <Col lg="4">{/* empty */}</Col>
@@ -67,6 +67,7 @@ const Landing = () => {
             <StockCard tick="MAC" />
           </Col>
         </Row>
+        <MetaTickers />
         <Row style={{ marginTop: "3rem" }}>
           <Col lg="4" md="3" sm="2">
             <US />

@@ -28,7 +28,6 @@ const News = () => {
         `https://api.polygon.io/v1/meta/symbols/${selTicker}/news?perpage=8&page=1&apiKey=${apiKey}`
       );
       if (res) {
-        const { data } = res;
         setNews((await res).data);
       }
       setLoading(false);
@@ -45,6 +44,7 @@ const News = () => {
 
   useEffect(() => {
     getTickerNews();
+    // eslint-disable-next-line
   }, [selTicker]);
 
   return (
