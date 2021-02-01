@@ -12,6 +12,9 @@ import Clock from "react-live-clock";
 import News from "../components/News";
 import MetaTickers from "../components/MetaTickers";
 import ShortInt from "../components/ShortInt";
+// wallet
+import bitcoin from "../assets/wallet/bitcoin.png";
+import eth from "../assets/wallet/ethereum.png";
 const Landing = () => {
   return (
     <>
@@ -138,6 +141,33 @@ const Landing = () => {
           </a>{" "}
           page. Thank you!
         </p>
+        <p>
+          Please help me cover the market data fees to keep this site without
+          ads and free. Donate whatever you can:
+        </p>
+        <Row
+          className="wallet"
+          style={{ marginTop: "3rem", marginBottom: "3rem" }}
+        >
+          <Col md="3"></Col>
+          <Col md="3">
+            <p>*Bitcoin*</p>
+            <img
+              src={bitcoin}
+              alt="bitcoin"
+              style={{ height: "150px", width: "150px" }}
+            />
+          </Col>
+          <Col md="3">
+            <p>*Ethereum*</p>{" "}
+            <img
+              src={eth}
+              alt="eth"
+              style={{ height: "150px", width: "150px" }}
+            />
+          </Col>
+          <Col md="3"></Col>
+        </Row>
         <Disclaimer />
       </footer>
     </>
