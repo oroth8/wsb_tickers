@@ -4,7 +4,7 @@ const ShortInt = () => {
   return (
     <div>
       <h5>Short Interest Data</h5>
-      <p>Updated 1/29 10am EST</p>
+      <p>Updated 2/1 10am EST</p>
       <ul>
         <li>(58.21% of float) by Ortex</li>
         <li>27.13m (53.15% of float) by S3 Shortsight</li>
