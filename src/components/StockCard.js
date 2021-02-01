@@ -74,7 +74,7 @@ const StockCard = ({ tick }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       getTickerData();
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [getTickerData, marketData]);
 

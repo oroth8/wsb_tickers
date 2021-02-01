@@ -49,13 +49,13 @@ const MetaTickers = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       getTickerData();
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [getTickerData, marketData]);
 
   return (
     <div style={{ float: "right" }}>
-      <p>Set your tab ticker! *Price won't change when market is closed</p>
+      <p>Set your tab ticker! *Price may be slightly delayed</p>
       <Dropdown
         isOpen={dropdownOpen}
         toggle={toggle}
