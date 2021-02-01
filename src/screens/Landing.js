@@ -41,8 +41,7 @@ const Landing = () => {
               />
             </h6>
             <p style={{ textAlign: "center" }}>
-              *Note: Data is SAMPLE only until market data portal opens at 4am
-              EST
+              *Note: Prices remain 0 until market opens. EST
             </p>
           </Col>
         </Row>

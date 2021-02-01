@@ -13,7 +13,7 @@ const StockCard = ({ tick }) => {
   const [show, setShow] = useState(false);
   // const [data, setData] = useState(null);
   // Loading state for api requests
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(0);
   // message/alert state
   const [message, setMessage] = useState(null);
   // while loading, price will change opacity to show price is updating
@@ -21,18 +21,19 @@ const StockCard = ({ tick }) => {
   const [opacity, setOpacity] = useState("1");
 
   const [stockData, setStockData] = useState(null);
+  const [marketData, setMarketData] = useState(tickerData);
 
   // grabs previous close data from polygon
   const getPrevCloseData = async () => {
     try {
-      setLoading(true);
+      //  setLoading(true)
       const res = await axios.get(
         `https://api.polygon.io/v2/aggs/ticker/${tick}/prev?unadjusted=true&apiKey=${apiKey}`
       );
       if (res) {
         setStockData(res.data.results[0]);
       }
-      setLoading(false);
+      // setLoading(loading + 1);
     } catch (error) {
       if (error.response.statusText) {
         setMessage(error.response.statusText);
@@ -43,36 +44,40 @@ const StockCard = ({ tick }) => {
     }
   };
   // API returns error if market is closed, enable when market opens (need to create conditonal for this)
-  // const getTickerData = async () => {
-  //   try {
-  //     setLoading(true);
-  //     setOpacity("0.5");
-  //     const res = await axios.get(
-  //       `https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tickers/${tick}?&apiKey=${apiKey}`
-  //     );
-  //     setData(res);
-  //     setLoading(false);
-  //     setOpacity("1");
-  //   } catch (error) {
-  //     setMessage(error.response.statusText);
-  //   }
-  // };
+  const getTickerData = async () => {
+    try {
+      setLoading(loading);
+      setOpacity("0.5");
+      const res = await axios.get(
+        `https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tickers/${tick}?&apiKey=${apiKey}`
+      );
+      if (res.data) {
+        setMarketData((await res).data);
+      }
+      if (loading < 3) {
+        setLoading(loading + 1);
+      }
+      setOpacity("1");
+    } catch (error) {
+      setMessage(error.response.statusText);
+    }
+  };
 
   // when page mounts, get previous close data from function
   // ***change to getTickerData when market opens, remove close data func.
   useEffect(() => {
-    getPrevCloseData();
+    // getPrevCloseData();
     // eslint-disable-next-line
   }, []);
 
-  // calls ticker data every 5 seconds
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     getTickerData();
-  //     console.log(data);
-  //   }, 5000);
-  //   return () => clearInterval(interval);
-  // }, [getTickerData]);
+  // calls ticker data every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      getTickerData();
+      console.log(marketData);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [getTickerData, marketData]);
 
   // deconstructing sample data / real ticker data (SEE POLYGON FOR RESPONSE OBJECT)
   const {
@@ -85,7 +90,7 @@ const StockCard = ({ tick }) => {
     todaysChange,
     todaysChangePerc,
     // updated,
-  } = tickerData.ticker;
+  } = marketData.ticker;
 
   // color changer for positive or negative pricing
   useEffect(() => {
@@ -101,7 +106,7 @@ const StockCard = ({ tick }) => {
       {/* If message, display it. Otherwise null */}
       {message ? <Alert color="danger">{message}</Alert> : null}
       {/* If loading, display loader. Otherwise load stock data */}
-      {loading === true ? (
+      {loading === 0 ? (
         <Loader />
       ) : (
         <>
@@ -110,15 +115,15 @@ const StockCard = ({ tick }) => {
               {tick}{" "}
               {/* price color and price opacity options based on price/loading */}
               <span style={{ color: `${color}`, opacity: `${opacity}` }}>
-                {stockData.c}
+                {min.c}
               </span>
             </h4>
             <p className="tickerData">
               Today's Change:{" "}
               {todaysChange > 0 ? (
-                <span style={{ color: "green" }}>{todaysChange}</span>
+                <span style={{ color: "green" }}>${todaysChange}</span>
               ) : (
-                <span style={{ color: "red" }}>{todaysChange}</span>
+                <span style={{ color: "red" }}>${todaysChange}</span>
               )}{" "}
               |{" "}
               {todaysChangePerc > 0 ? (
@@ -126,7 +131,7 @@ const StockCard = ({ tick }) => {
               ) : (
                 <span style={{ color: "red" }}>{todaysChangePerc}</span>
               )}{" "}
-              % | Open: ${min.o}
+              % | Open: ${day.o}
             </p>
             <br />
             {!show ? (
@@ -167,31 +172,31 @@ const StockCard = ({ tick }) => {
               {/* END PREV DAY */}
               {/* LAST QUOTE */}
               {/* <div>
-            <h4>Last Quote</h4>
-            <h6>Bid: {lastQuote.p}</h6>
-            <h6>Bid Size: {lastQuote.S}</h6>
-            <h6>Ask Price: {lastQuote.P}</h6>
-            <h6>Ask Size: {lastQuote.S}</h6>
-          </div> */}
+     <h4>Last Quote</h4>
+     <h6>Bid: {lastQuote.p}</h6>
+     <h6>Bid Size: {lastQuote.S}</h6>
+     <h6>Ask Price: {lastQuote.P}</h6>
+     <h6>Ask Size: {lastQuote.S}</h6>
+   </div> */}
               {/* END LAST QUOTE */}
               {/* LAST MIN BAR */}
               {/* <div>
-                <h5>Latest Minute Bar</h5>
-                <h6>Price: {min.o}</h6>
-                <h6>High: {min.h}</h6>
-                <h6>Low: {min.l}</h6>
-                <h6>Close: {min.c}</h6>
-                <h6>Volume: {min.v}</h6>
-                <h6>Accumulated Volume: {min.av}</h6>
-                <h6>Volune Weight Avg: {min.vw}</h6>
-              </div> */}
+         <h5>Latest Minute Bar</h5>
+         <h6>Price: {min.o}</h6>
+         <h6>High: {min.h}</h6>
+         <h6>Low: {min.l}</h6>
+         <h6>Close: {min.c}</h6>
+         <h6>Volume: {min.v}</h6>
+         <h6>Accumulated Volume: {min.av}</h6>
+         <h6>Volune Weight Avg: {min.vw}</h6>
+       </div> */}
               {/* END LAST MINUTE BAR */}
               {/* DAY CHANGES */}
               {/* <div>
-            <h4>Changes</h4>
-            <h6>Today's Change: {todaysChange}</h6>
-            <h6>Today's Change Percent: {todaysChangePerc}</h6>
-          </div> */}
+     <h4>Changes</h4>
+     <h6>Today's Change: {todaysChange}</h6>
+     <h6>Today's Change Percent: {todaysChangePerc}</h6>
+   </div> */}
               {/* END DAY CHANGES */}
             </CardBody>
           )}
