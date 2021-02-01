@@ -40,9 +40,9 @@ const Landing = () => {
                 timezone={"US/Eastern"}
               />
             </h6>
-            <p style={{ textAlign: "center" }}>
+            {/* <p style={{ textAlign: "center" }}>
               *Note: Prices remain 0 until market opens. EST
-            </p>
+            </p> */}
           </Col>
         </Row>
         <Row style={{ marginTop: "3rem", marginBottom: "3rem" }}>
