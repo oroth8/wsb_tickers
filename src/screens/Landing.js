@@ -75,6 +75,14 @@ const Landing = () => {
             <div>
               <h5>Has the squeeze happened yet?</h5>
               <p>No short interest too high.</p>
+              <p>
+                Shorts appear to be exiting their positions. There's a lot of
+                speculation about how this is happening, or whether it is truly
+                happening at all - there are tactics that can be used to
+                "counterfeit" stock or manipulate disclosed short short interest
+                - but the short interest numbers we've been following all along
+                are definitely trending down.{" "}
+              </p>
             </div>
           </Col>
           <Col md="4">
