@@ -114,8 +114,19 @@ const StockCard = ({ tick }) => {
               </span>
             </h4>
             <p className="tickerData">
-              Today's Change: {todaysChange} | {todaysChangePerc}% | Open: $
-              {min.o}
+              Today's Change:{" "}
+              {todaysChange > 0 ? (
+                <span style={{ color: "green" }}>{todaysChange}</span>
+              ) : (
+                <span style={{ color: "red" }}>{todaysChange}</span>
+              )}{" "}
+              |{" "}
+              {todaysChangePerc > 0 ? (
+                <span style={{ color: "green" }}>{todaysChangePerc}</span>
+              ) : (
+                <span style={{ color: "red" }}>{todaysChangePerc}</span>
+              )}{" "}
+              % | Open: ${min.o}
             </p>
             <br />
             {!show ? (
