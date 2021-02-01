@@ -71,10 +71,7 @@ const MetaTickers = () => {
           <DropdownItem onClick={() => setSelTicker("MAC")}>MAC</DropdownItem>
         </DropdownMenu>
       </Dropdown>
-      <Meta
-        ticker1={selTicker}
-        price={marketData.min.o.toFixed(2).toString()}
-      />
+      <Meta ticker1={selTicker} price={marketData.min.o.toString()} />
     </div>
   );
 };
