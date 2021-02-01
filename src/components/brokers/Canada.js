@@ -75,7 +75,7 @@ const Canada = () => {
                 CIBC
               </a>
             </td>
-            <td style={{ color: "lightgreen" }}>Quick</td>
+            <td style={{ color: "orange" }}>Slow</td>
           </tr>
         </tbody>
       </Table>
