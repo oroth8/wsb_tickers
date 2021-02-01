@@ -54,7 +54,7 @@ const StockCard = ({ tick }) => {
       if (res.data) {
         setMarketData((await res).data);
       }
-      if (loading < 3) {
+      if (loading < 2) {
         setLoading(loading + 1);
       }
       setOpacity("1");
