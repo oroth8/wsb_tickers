@@ -114,7 +114,7 @@ const StockCard = ({ tick }) => {
               {tick}{" "}
               {/* price color and price opacity options based on price/loading */}
               <span style={{ color: `${color}`, opacity: `${opacity}` }}>
-                {min.c}
+                {min.c.toFixed(2)}
               </span>
             </h4>
             <p className="tickerData">
