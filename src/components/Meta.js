@@ -1,10 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-const Meta = ({ ticker1 }) => {
+const Meta = ({ ticker1, price }) => {
   return (
     <Helmet>
-      <title>$325.00 {ticker1} | WSBTs</title>
+      <title>
+        ${price} {ticker1} | WSBTs
+      </title>
       <meta
         name="description"
         content="A dashboard for Wall Street Bet Tickers"
