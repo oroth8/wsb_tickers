@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Alert } from "reactstrap";
 import Canada from "../components/brokers/Canada";
 import Europe from "../components/brokers/Europe";
 import NavbarHeader from "../components/NavbarHeader";
@@ -39,6 +39,7 @@ const Landing = () => {
                 ticking={true}
                 timezone={"US/Eastern"}
               />
+              <Alert color="secondary">After Hours</Alert>
             </h6>
             {/* <p style={{ textAlign: "center" }}>
               *Note: Prices remain 0 until market opens. EST
