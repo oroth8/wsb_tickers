@@ -60,6 +60,7 @@ const StockCard = ({ tick }) => {
       setOpacity("1");
     } catch (error) {
       setMessage(error.response.statusText);
+      setLoading(false);
     }
   };
 

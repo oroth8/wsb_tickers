@@ -44,8 +44,9 @@ const Landing = () => {
                 timezone={"US/Eastern"}
               />
               <Alert color="secondary">
-                After Hours: Not Server Will Stop When Market No Longer Sends
-                Data to API. Might See Errors!
+                After Hours: Data comes straight from markets in NY. Note: If
+                "Not Found" is displayed. Market Data has stopped. Live
+                real-time data resumes at 4AM ET. Thank you.
               </Alert>
             </h6>
             {/* <p style={{ textAlign: "center" }}>
