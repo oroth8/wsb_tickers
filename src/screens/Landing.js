@@ -15,6 +15,7 @@ import ShortInt from "../components/ShortInt";
 // wallet
 import bitcoin from "../assets/wallet/bitcoin.png";
 import eth from "../assets/wallet/ethereum.png";
+import Updates from "../components/Updates";
 const Landing = () => {
   return (
     <>
@@ -78,14 +79,19 @@ const Landing = () => {
           <Col md="4">
             <div>
               <h5>Has the squeeze happened yet?</h5>
-              <p>No short interest too high.</p>
+              <p>In my non-financial, personal opinion no.</p>
               <p>
-                Shorts appear to be exiting their positions. There's a lot of
-                speculation about how this is happening, or whether it is truly
-                happening at all - there are tactics that can be used to
-                "counterfeit" stock or manipulate disclosed short short interest
-                - but the short interest numbers we've been following all along
-                are definitely trending down.{" "}
+                Bloomber, CNBC, and other finacial media outlets are reporting
+                it has or there won't be a squeeze as big as 2008. GME dropped
+                significantly durring market hours and after hours on 2/1,
+                however volume implies that a massive sell off did not occur.
+                Significant claims of "short-ladder attacks" and news
+                manipulation of silver prices riddled r/WSBs on Monday. VW in
+                2008 had a similar dip before the squeeze, so it is possible it
+                has not happend yet. Short interest information is hard to find
+                and conflicts with reality. CNBC is running one story and r/WSB
+                is running another. Impossible to tell who is right at this
+                point.
               </p>
             </div>
           </Col>
@@ -111,6 +117,9 @@ const Landing = () => {
         </Row>
         <Row style={{ marginTop: "3rem" }}>
           <News />
+        </Row>
+        <Row style={{ marginTop: "3rem" }}>
+          <Updates />
         </Row>
       </Container>
       <footer style={{ textAlign: "center", marginTop: "1rem" }}>
