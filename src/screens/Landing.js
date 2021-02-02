@@ -81,7 +81,7 @@ const Landing = () => {
               <h5>Has the squeeze happened yet?</h5>
               <p>In my non-financial, personal opinion no.</p>
               <p>
-                Bloomber, CNBC, and other finacial media outlets are reporting
+                Bloomberg, CNBC, and other finacial media outlets are reporting
                 it has or there won't be a squeeze as big as 2008. GME dropped
                 significantly durring market hours and after hours on 2/1,
                 however volume implies that a massive sell off did not occur.
