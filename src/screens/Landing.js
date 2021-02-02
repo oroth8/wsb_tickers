@@ -43,7 +43,10 @@ const Landing = () => {
                 ticking={true}
                 timezone={"US/Eastern"}
               />
-              <Alert color="secondary">After Hours</Alert>
+              <Alert color="secondary">
+                After Hours: Not Server Will Stop When Market No Longer Sends
+                Data to API. Might See Errors!
+              </Alert>
             </h6>
             {/* <p style={{ textAlign: "center" }}>
               *Note: Prices remain 0 until market opens. EST
