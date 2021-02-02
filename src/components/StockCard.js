@@ -131,7 +131,7 @@ const StockCard = ({ tick }) => {
               ) : (
                 <span style={{ color: "red" }}>{todaysChangePerc}</span>
               )}{" "}
-              % | Close: ${day.c}
+              % | Open: ${day.o}
             </p>
             <br />
             {!show ? (

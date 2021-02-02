@@ -43,11 +43,7 @@ const Landing = () => {
                 ticking={true}
                 timezone={"US/Eastern"}
               />
-              <Alert color="secondary">
-                After Hours: Data comes straight from markets in NY. Note: If
-                "Not Found" is displayed. Market Data has stopped. Live
-                real-time data resumes at 4AM ET. Thank you.
-              </Alert>
+              {/* <Alert color="secondary">Pre-Market Hours</Alert> */}
             </h6>
             {/* <p style={{ textAlign: "center" }}>
               *Note: Prices remain 0 until market opens. EST
@@ -85,17 +81,22 @@ const Landing = () => {
               <h5>Has the squeeze happened yet?</h5>
               <p>In my non-financial, personal opinion no.</p>
               <p>
-                Bloomberg, CNBC, and other finacial media outlets are reporting
-                it has or there won't be a squeeze as big as 2008. GME dropped
-                significantly durring market hours and after hours on 2/1,
-                however volume implies that a massive sell off did not occur.
-                Significant claims of "short-ladder attacks" and news
-                manipulation of silver prices riddled r/WSBs on Monday. VW in
-                2008 had a similar dip before the squeeze, so it is possible it
-                has not happend yet. Short interest information is hard to find
-                and conflicts with reality. CNBC is running one story and r/WSB
-                is running another. Impossible to tell who is right at this
-                point.
+                Last week, a colapse of the stock market almost occured. DTCC
+                relized this and increased collateral requirements on 1/28 to
+                purchase GME to 100%. DTCC likely recognized the finacial
+                liability in the squeeze and that it could eventually reach the
+                clearinghouses if market makers went bankrupt. The
+                failure-to-deliver numbers were highly indicative of this. DTCC
+                most likely made the choice to do this to allow the short hedge
+                funds to stetch out the squeeze into a longer, sustained squeeze
+                rather than a peak seen in VW circa 2008. Now, Robinhood is
+                taking the blame for not allowing users to purchase certain
+                stock. However, larger parties are at play here. That is likely
+                why the SEC has not jumped on anything.
+              </p>
+              <p style={{ color: "white" }}>
+                TLDR: DTCC is likely allowing a long drawn out squeeze to avoid
+                market collapse in my non-finacial opinion.
               </p>
             </div>
           </Col>
