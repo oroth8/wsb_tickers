@@ -130,6 +130,20 @@ const Restrictions = () => {
               firm to execute trades.
             </td>
           </tr>
+          <tr>
+            <td>
+              <a
+                href="https://www.revolut.com/en-US"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Revolut
+              </a>
+            </td>
+            <td>Shares</td>
+            <td>Restricted</td>
+            <td>Can not buy GME or AMC. Sell only.</td>
+          </tr>
         </tbody>
       </Table>
     </>

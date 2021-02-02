@@ -56,18 +56,6 @@ const Europe = () => {
           <tr>
             <td>
               <a
-                href="https://www.revolut.com/en-US"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Revolut
-              </a>
-            </td>
-            <td style={{ color: "lightgreen" }}>Quick</td>
-          </tr>
-          <tr>
-            <td>
-              <a
                 href="https://www.hl.co.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
