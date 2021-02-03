@@ -43,10 +43,10 @@ const Landing = () => {
                 ticking={true}
                 timezone={"US/Eastern"}
               />
-              <Alert color="secondary">
+              {/* <Alert color="secondary">
                 After-Market Hours: If "Not-found" is displayed. Market data has
                 stopped and will resume around 4am ET
-              </Alert>
+              </Alert> */}
             </h6>
             {/* <p style={{ textAlign: "center" }}>
               *Note: Prices remain 0 until market opens. EST
@@ -82,24 +82,20 @@ const Landing = () => {
           <Col md="4">
             <div>
               <h5>Has the squeeze happened yet?</h5>
-              <p>In my non-financial, personal opinion no.</p>
               <p>
-                Last week, a colapse of the stock market almost occured. DTCC
-                relized this and increased collateral requirements on 1/28 to
-                purchase GME to 100%. DTCC likely recognized the finacial
-                liability in the squeeze and that it could eventually reach the
-                clearinghouses if market makers went bankrupt. The
-                failure-to-deliver numbers were highly indicative of this. DTCC
-                most likely made the choice to do this to allow the short hedge
-                funds to stetch out the squeeze into a longer, sustained squeeze
-                rather than a peak seen in VW circa 2008. Now, Robinhood is
-                taking the blame for not allowing users to purchase certain
-                stock. However, larger parties are at play here. That is likely
-                why the SEC has not jumped on anything.
+                In my non-financial, personal opinion no. Will it squeeze?
+                Probably not.
               </p>
-              <p style={{ color: "white" }}>
-                TLDR: DTCC is likely allowing a long drawn out squeeze to avoid
-                market collapse in my non-finacial opinion.
+              <p>
+                No question we saw GME and other r/WSBs tickers bleed yesterday.
+                For a squeeze to occur, you need constant buying presussure. I
+                am not sure if we have that any more due to more volume being
+                traded yesterday. Brokerage restrictions are still in play
+                prohibiting the people from truly squeezing these hedge funds. I
+                have a feeling this will drag out for many weeks to come, and
+                the hedge funds will slowly exit their positions. Might see a
+                more gradual spike in prices, but a squeeze similar to VW in
+                2008 is probably not going to happen without pressure.
               </p>
             </div>
           </Col>
