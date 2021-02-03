@@ -128,6 +128,16 @@ const Landing = () => {
       </Container>
       <footer style={{ textAlign: "center", marginTop: "1rem" }}>
         <p>
+          Checkout u/robotdjman's awesome site with charts:{" "}
+          <a
+            href="https://slingitwallstreet.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            slingitwallstreet.com
+          </a>
+        </p>
+        <p>
           If you enjoy this site please venmo{" "}
           <span style={{ color: "lightgreen" }}>@Owen-Roth</span> any ammount
           you please. Need to buy more GME!!!! To the MOON!!!
