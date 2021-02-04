@@ -43,10 +43,10 @@ const Landing = () => {
                 ticking={true}
                 timezone={"US/Eastern"}
               />
-              <Alert color="secondary">
+              {/* <Alert color="secondary">
                 After-Market Hours: If "Not-found" is displayed. Market data has
                 stopped and will resume around 4am ET
-              </Alert>
+              </Alert> */}
             </h6>
             {/* <p style={{ textAlign: "center" }}>
               *Note: Prices remain 0 until market opens. EST
