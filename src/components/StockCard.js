@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import tickerData from "../Data/data";
 import { Card, CardHeader, CardBody, Alert, Button } from "reactstrap";
 import Loader from "./Loader";
+import Chart from "react-apexcharts";
 
 const StockCard = ({ tick }) => {
   // Api key from env file
@@ -22,6 +23,8 @@ const StockCard = ({ tick }) => {
 
   const [stockData, setStockData] = useState(null);
   const [marketData, setMarketData] = useState(tickerData);
+  const [chartData, setChartData] = useState([]);
+  const [chartTime, setChartTime] = useState([]);
 
   // grabs previous close data from polygon
   const getPrevCloseData = async () => {
@@ -89,17 +92,52 @@ const StockCard = ({ tick }) => {
     prevDay,
     todaysChange,
     todaysChangePerc,
-    // updated,
+    updated,
   } = marketData.ticker;
 
   // color changer for positive or negative pricing
   useEffect(() => {
+    chartData.push(min.c.toFixed(2));
+    const date1 = new Date();
+    console.log(chartData);
+    chartTime.push(date1.getHours() + ":" + date1.getMinutes());
+    console.log(chartTime);
     if (min.o > prevDay.c) {
       setColor("green");
     } else {
       setColor("red");
     }
-  }, [setColor, min.o, prevDay.c]);
+  }, [setColor, min.o, prevDay.c, min.c, chartTime, chartData]);
+
+  const chartstuff = {
+    options: {
+      colors: ["#ff0000"],
+      chart: {
+        id: "basic-line",
+        zoom: {
+          enabled: false,
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      grid: {
+        row: {
+          colors: ["transparent", "transparent"], // takes an array which will be repeated on columns
+          opacity: 0.5,
+        },
+      },
+      xaxis: {
+        categories: chartTime,
+      },
+    },
+    series: [
+      {
+        name: tick,
+        data: chartData.filter((num) => num !== "120.42"),
+      },
+    ],
+  };
 
   return (
     <Card className="stockCard">
@@ -168,6 +206,17 @@ const StockCard = ({ tick }) => {
                 <h6>Lowest Price: {prevDay.l}</h6>
                 <h6>Volume: {prevDay.v}</h6>
                 <h6>Volume Weight Avg: {prevDay.vw}</h6>
+              </div>
+              <div>
+                <hr></hr>
+                <h6>*Keep page open for chart functionality*</h6>
+                <Chart
+                  options={chartstuff.options}
+                  series={chartstuff.series}
+                  type="line"
+                  width="300"
+                  height="150"
+                />
               </div>
               {/* END PREV DAY */}
               {/* LAST QUOTE */}

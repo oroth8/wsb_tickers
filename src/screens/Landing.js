@@ -84,18 +84,13 @@ const Landing = () => {
               <h5>Has the squeeze happened yet?</h5>
               <p>
                 In my non-financial, personal opinion no. Will it squeeze?
-                Probably not.
+                Probably not. Will it? Probably not.
               </p>
               <p>
-                No question we saw GME and other r/WSBs tickers bleed yesterday.
-                For a squeeze to occur, you need constant buying presussure. I
-                am not sure if we have that any more due to more volume being
-                traded yesterday. Brokerage restrictions are still in play
-                prohibiting the people from truly squeezing these hedge funds. I
-                have a feeling this will drag out for many weeks to come, and
-                the hedge funds will slowly exit their positions. Might see a
-                more gradual spike in prices, but a squeeze similar to VW in
-                2008 is probably not going to happen without pressure.
+                Shorts have stopped exiting their positions and are maintaining
+                a level of short interest of about 26%-50% of float. New shares
+                are now available to borrow for retail traders to short, and
+                borrow rates are low.
               </p>
             </div>
           </Col>
