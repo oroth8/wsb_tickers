@@ -30,6 +30,13 @@ const Landing = () => {
           <Col lg="4">{/* empty */}</Col>
         </Row>
         <Row>
+          <Alert>
+            Market Data has stopped. I can no longer pay for the expensive api
+            data. Happy to answer any questions on the project's github linked
+            at the bottom. Thanks for enjoying!
+          </Alert>
+        </Row>
+        <Row>
           <Col>
             <h1 style={{ textAlign: "center" }}>
               Ticker Dashboard{" "}
